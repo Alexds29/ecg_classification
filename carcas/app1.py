@@ -106,7 +106,7 @@ def enter_item():
             elif np.argmax(model.predict(v), axis=-1) == 5:
                 flash('Atrial Flutter')
             elif np.argmax(model.predict(v), axis=-1) == 6:
-                flash('Sinus Atrium to Atrial Wandering Rhythm')
+                flash('Sinus Atrium')
             elif np.argmax(model.predict(v), axis=-1) == 7:
                 flash('Atrial Tachycardia')
             else:
