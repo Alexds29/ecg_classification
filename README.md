@@ -107,3 +107,14 @@
 
 
 ![image](https://user-images.githubusercontent.com/112484521/206207730-7b7e7f47-606e-4953-891a-065c4c5ec3f5.png)
+
+
+ВЫВОД.
+Точность предложенной нейросетевой системы, проверена исследованием
+на тестовой группе, составила 88%. Точность обнаружения и извлечения компонентов сигнала ЭКГ, показывает, что разработанная нейросетевая модель может быть использована для выявления заболеваний сердца у пациентов.
+
+
+ИСПОЛЬЗУЕМЫЕ ССЫЛКИ.
+1. https://www.who.int/ru/health-topics/cardiovascular-diseases#tab=tab_1
+2. https://www.who.int/ru/news-room/fact-sheets/detail/the-top-10-causes-of-death
+3. https://cyberleninka.ru/article/n/ispolzovanie-neyrosetevyh-metodov-dlya-avtomaticheskogo-analiza-elektrokardiogramm-pri-diagnostike-zabolevaniy-serdechno-sosudistoy
