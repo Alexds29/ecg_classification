@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{{ super () }}
+
+<div class = "container">
+
+
+<div class = "row">
+<div class = "col-md-8">
+
+   <label >Ввод данных для нового прогноза </label>
+
+   <br>
+
+</div>
+</div>
+
+
+<div class = "row">
+<div class = "col-md-8">
+
+
+<form action="/enter_item" enctype="multipart/form-data" method="post">
+
+
+
+
+  
+
+<table class="table table-striped table-hover">
+
+  <tr>
+     <td><label class="text-primary" for="PatientAge">Patient Age:</label></td>
+     <td><input type="number" id="PatientAge" name="PatientAge" min=1 max=99 step=1 value=50></td>
+  </tr>
+
+
+  <tr>
+     <td><label class="text-primary">Gender: </label></td>
+     <td><select name="Gender">
+        <option disabled>Выберите вариант</option>
+        <option value="0">Female</option>
+        <option value="1">Male</option>
+        </select></td>
+  </tr>
+
+
+  <tr>
+    <td><label class="text-primary" for="VentricularRate">Ventricular Rate</label></td>
+    <td><input type="number" id="VentricularRate" name="VentricularRate" min=30 max=270 step=1 value=150></td>
+  </tr>
+  
+  
+  <tr>
+    <td><label class="text-primary" for="AtrialRate">Atrial Rate</label></td>
+    <td><input type="number" id="AtrialRate" name="AtrialRate" min=0 max=540 step=1 value=270></td>
+  </tr>
+
+
+  <tr>
+    <td><label class="text-primary" for="QRSDuration">QRS Duration</label></td>
+    <td><input type="number" id="QRSDuration" name="QRSDuration" min=15 max=260 step=1 value=130></td>
+  </tr>
+  
+  
+  <tr>
+    <td><label class="text-primary" for="QTInterval">QT Interval</label></td>
+    <td><input type="number" id="QTInterval" name="QTInterval" min=110 max=740 step=2 value=420></td>
+  </tr>
+
+  
+  <tr>
+    <td><label class="text-primary" for="QTCorrected">QT Corrected</label></td>
+    <td><input type="number" id="QTCorrected" name="QTCorrected" min=215 max=760 step=1 value=500></td>
+  </tr>
+  
+  
+  <tr>
+    <td><label class="text-primary" for="RAxis">RAxis</label></td>
+    <td><input type="number" id="RAxis" name="RAxis" min=-90 max=270 step=1 value=100></td>
+  </tr>
+
+  <tr>
+    <td><label class="text-primary" for="TAxis">TAxis</label></td>
+    <td><input type="number" id="TAxis" name="TAxis" min=-90 max=270 step=1 value=100></td>
+  </tr>
+
+
+  <tr>
+    <td><label class="text-primary" for="QRSCount">QRS Count</label></td>
+    <td><input type="number" id="QRSCount" name="QRSCount" min=5 max=40 step=1 value=20></td>
+  </tr>
+ 
+  
+  <tr>
+    <td><label class="text-primary" for="QOnset">Q Onset</label></td>
+    <td><input type="number" id="QOnset" name="QOnset" min=155 max=240 step=1 value=200></td>
+  </tr>
+  
+  
+  <tr>
+    <td><label class="text-primary" for="QOffset">Q Offset</label></td>
+    <td><input type="number" id="QOffset" name="QOffset" min=245 max=335 step=1 value=290></td>
+  </tr>
+
+
+  <tr>
+    <td><label class="text-primary" for="TOffset">T Offset</label></td>
+    <td><input type="number" id="TOffset" name="TOffset" min=280 max=585 step=1 value=430></td>
+  </tr>  
+  
+  
+  
+  
+  <tr>
+     <td> </td>
+     <td align="right"> <input type="submit" class="btn btn-primary" value="Получить прогноз" /></td>
+  </tr>
+
+</table>
+</form> 
+</div>
+</div>
+
+
+</div>
+
+<div class = "container text-danger">
+  {% for msg in get_flashed_messages() %}
+    <div>{{msg}}</div>
+  {% endfor %} 
+</div>
+{% endblock content %}
